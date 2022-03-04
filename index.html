@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原版模板</title>
+    <style>
+        .box {
+            width: 0;
+            height: 0;
+            border: 5px solid #fff;
+            border-top-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <script>
+        console.log("hi！");
+        dgFun(3)
+        function dgFun(num) {
+            console.log(num);
+            if (num == 0) {
+                console.log("这是一个");
+            } else {
+                console.log("网址");
+                dgFun(--num)
+            }
+            console.log("hello");
+        }
+    </script>
+</body>
+
+</html>

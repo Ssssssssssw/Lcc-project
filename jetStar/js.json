@@ -1,0 +1,221 @@
+[
+    {
+        "fromSegments": [
+            {
+                "depAirport": "MEL",
+                "depCity": "MEL",
+                "depTime": "2022-02-19 14:45:00",
+                "arrAirport": "BNK",
+                "arrCity": "BNK",
+                "arrTime": "2022-02-19 16:45:00",
+                "flightNumber": "JQ464",
+                "flightTime": 120,
+                "carrier": "JQ",
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "JQ",
+                "operatingFlightNumber": "JQ464",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 94,
+                "currency": "AUD",
+                "passengerType": "ADT",
+                "quantity": 1,
+                "tax": 0
+            }
+        ],
+        "productType": ""
+    },
+    {
+        "fromSegments": [
+            {
+                "depAirport": "MEL",
+                "depCity": "MEL",
+                "depTime": "2022-02-19 06:10:00",
+                "arrAirport": "SYD",
+                "arrCity": "SYD",
+                "arrTime": "2022-02-19 07:40:00",
+                "flightNumber": "JQ500",
+                "flightTime": 90,
+                "carrier": "JQ",
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "JQ",
+                "operatingFlightNumber": "JQ500",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            },
+            {
+                "depAirport": "SYD",
+                "depCity": "SYD",
+                "depTime": "2022-02-19 10:35:00",
+                "arrAirport": "BNK",
+                "arrCity": "BNK",
+                "arrTime": "2022-02-19 11:50:00",
+                "flightNumber": "JQ458",
+                "flightTime": 75,
+                "carrier": "JQ",
+                "flightClass": "E",
+                "operatingCarrier": "E",
+                "operatingFlightNumber": "JQ458",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 544,
+                "currency": "AUD",
+                "passengerType": "ADT",
+                "quantity": 1,
+                "tax": 0
+            }
+        ],
+        "productType": ""
+    },
+    {
+        "fromSegments": [
+            {
+                "depAirport": "MEL",
+                "depCity": "MEL",
+                "depTime": "2022-02-19 07:15:00",
+                "arrAirport": "SYD",
+                "arrCity": "SYD",
+                "arrTime": "2022-02-19 08:45:00",
+                "flightNumber": "JQ502",
+                "flightTime": 90,
+                "carrier": "JQ",
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "JQ",
+                "operatingFlightNumber": "JQ502",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            },
+            {
+                "depAirport": "SYD",
+                "depCity": "SYD",
+                "depTime": "2022-02-19 10:35:00",
+                "arrAirport": "BNK",
+                "arrCity": "BNK",
+                "arrTime": "2022-02-19 11:50:00",
+                "flightNumber": "JQ458",
+                "flightTime": 75,
+                "carrier": "JQ",
+                "flightClass": "E",
+                "operatingCarrier": "E",
+                "operatingFlightNumber": "JQ458",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 568,
+                "currency": "AUD",
+                "passengerType": "ADT",
+                "quantity": 1,
+                "tax": 0
+            }
+        ],
+        "productType": ""
+    },
+    {
+        "fromSegments": [
+            {
+                "depAirport": "MEL",
+                "depCity": "MEL",
+                "depTime": "2022-02-19 07:15:00",
+                "arrAirport": "SYD",
+                "arrCity": "SYD",
+                "arrTime": "2022-02-19 08:45:00",
+                "flightNumber": "JQ502",
+                "flightTime": 90,
+                "carrier": "JQ",
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "JQ",
+                "operatingFlightNumber": "JQ502",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            },
+            {
+                "depAirport": "SYD",
+                "depCity": "SYD",
+                "depTime": "2022-02-19 14:45:00",
+                "arrAirport": "BNK",
+                "arrCity": "BNK",
+                "arrTime": "2022-02-19 16:00:00",
+                "flightNumber": "JQ460",
+                "flightTime": 75,
+                "carrier": "JQ",
+                "flightClass": "E",
+                "operatingCarrier": "E",
+                "operatingFlightNumber": "JQ460",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 358,
+                "currency": "AUD",
+                "passengerType": "ADT",
+                "quantity": 1,
+                "tax": 0
+            }
+        ],
+        "productType": ""
+    },
+    {
+        "fromSegments": [
+            {
+                "depAirport": "MEL",
+                "depCity": "MEL",
+                "depTime": "2022-02-19 10:40:00",
+                "arrAirport": "SYD",
+                "arrCity": "SYD",
+                "arrTime": "2022-02-19 12:05:00",
+                "flightNumber": "JQ512",
+                "flightTime": 85,
+                "carrier": "JQ",
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "JQ",
+                "operatingFlightNumber": "JQ512",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            },
+            {
+                "depAirport": "SYD",
+                "depCity": "SYD",
+                "depTime": "2022-02-19 14:45:00",
+                "arrAirport": "BNK",
+                "arrCity": "BNK",
+                "arrTime": "2022-02-19 16:00:00",
+                "flightNumber": "JQ460",
+                "flightTime": 75,
+                "carrier": "JQ",
+                "flightClass": "E",
+                "operatingCarrier": "E",
+                "operatingFlightNumber": "JQ460",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 458,
+                "currency": "AUD",
+                "passengerType": "ADT",
+                "quantity": 1,
+                "tax": 0
+            }
+        ],
+        "productType": ""
+    }
+]

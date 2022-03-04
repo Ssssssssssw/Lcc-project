@@ -1,0 +1,97 @@
+[
+    {
+        "segments": [
+            {
+                "depAirport": "MCO",
+                "depCity": "MCO",
+                "depTime": "2022-01-03 22:22:00",
+                "arrAirport": "ORD",
+                "arrCity": "ORD",
+                "arrTime": "2022-01-04 00:13:00",
+                "flightNumber": "F91154",
+                "flightTime": "171",
+                "carrier": "F9",
+                "itineraryIndex": 1,
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "F9",
+                "operatingFlightNumber": "F91154",
+                "seatsRemain": "5",
+                "segmentIndex": 1,
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 249,
+                "currency": "USD",
+                "passengerType": "ADT",
+                "quantity": 4,
+                "tax": 0
+            },
+            {
+                "baseFare": 249,
+                "currency": "USD",
+                "passengerType": "CHD",
+                "tax": 0,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "segments": [
+            {
+                "depAirport": "MCO",
+                "depCity": "MCO",
+                "depTime": "2022-01-03 21:25:00",
+                "arrAirport": "DEN",
+                "arrCity": "DEN",
+                "arrTime": "2022-01-03 23:37:00",
+                "flightNumber": "F9679",
+                "flightTime": "252",
+                "carrier": "F9",
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "F9",
+                "operatingFlightNumber": "F9679",
+                "seatsRemain": "5",
+                "stopQuantity": "0"
+            },
+            {
+                "depAirport": "DEN",
+                "depCity": "DEN",
+                "depTime": "2022-01-04 14:58:00",
+                "arrAirport": "ORD",
+                "arrCity": "ORD",
+                "arrTime": "2022-01-04 18:28:00",
+                "flightNumber": "F9410",
+                "flightTime": "150",
+                "carrier": "F9",
+                "itineraryIndex": 1,
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "F9",
+                "operatingFlightNumber": "F9410",
+                "seatsRemain": "5",
+                "segmentIndex": 2,
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 493,
+                "currency": "USD",
+                "passengerType": "ADT",
+                "tax": 0,
+                "quantity": 4
+            },
+            {
+                "baseFare": 493,
+                "currency": "USD",
+                "passengerType": "CHD",
+                "tax": 0,
+                "quantity": 1
+            }
+        ]
+    }
+]

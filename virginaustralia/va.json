@@ -1,0 +1,157 @@
+[
+    {
+        "fromSegments": [
+            {
+                "depAirport": "PER",
+                "depCity": "PER",
+                "depTime": "2022-05-04 07:00:00",
+                "arrAirport": "SYD",
+                "arrCity": "SYD",
+                "arrTime": "2022-05-04 13:20:00",
+                "flightNumber": "VA552",
+                "flightTime": "260",
+                "carrier": "VA",
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "VA",
+                "operatingFlightNumber": "VA552",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 199,
+                "currency": "USD",
+                "passengerType": "ADT",
+                "quantity": "1",
+                "tax": 0
+            }
+        ],
+        "productType": "Lite"
+    },
+    {
+        "fromSegments": [
+            {
+                "depAirport": "PER",
+                "depCity": "PER",
+                "depTime": "2022-05-04 09:55:00",
+                "arrAirport": "SYD",
+                "arrCity": "SYD",
+                "arrTime": "2022-05-04 16:15:00",
+                "flightNumber": "VA556",
+                "flightTime": "260",
+                "carrier": "VA",
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "VA",
+                "operatingFlightNumber": "VA556",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 199,
+                "currency": "USD",
+                "passengerType": "ADT",
+                "quantity": "1",
+                "tax": 0
+            }
+        ],
+        "productType": "Lite"
+    },
+    {
+        "fromSegments": [
+            {
+                "depAirport": "PER",
+                "depCity": "PER",
+                "depTime": "2022-05-04 13:55:00",
+                "arrAirport": "SYD",
+                "arrCity": "SYD",
+                "arrTime": "2022-05-04 20:15:00",
+                "flightNumber": "VA560",
+                "flightTime": "260",
+                "carrier": "VA",
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "VA",
+                "operatingFlightNumber": "VA560",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 199,
+                "currency": "USD",
+                "passengerType": "ADT",
+                "quantity": "1",
+                "tax": 0
+            }
+        ],
+        "productType": "Lite"
+    },
+    {
+        "fromSegments": [
+            {
+                "depAirport": "PER",
+                "depCity": "PER",
+                "depTime": "2022-05-04 15:55:00",
+                "arrAirport": "SYD",
+                "arrCity": "SYD",
+                "arrTime": "2022-05-04 22:15:00",
+                "flightNumber": "VA562",
+                "flightTime": "260",
+                "carrier": "VA",
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "VA",
+                "operatingFlightNumber": "VA562",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 199,
+                "currency": "USD",
+                "passengerType": "ADT",
+                "quantity": "1",
+                "tax": 0
+            }
+        ],
+        "productType": "Lite"
+    },
+    {
+        "fromSegments": [
+            {
+                "depAirport": "PER",
+                "depCity": "PER",
+                "depTime": "2022-05-04 23:55:00",
+                "arrAirport": "SYD",
+                "arrCity": "SYD",
+                "arrTime": "2022-05-05 06:15:00",
+                "flightNumber": "VA572",
+                "flightTime": "260",
+                "carrier": "VA",
+                "cabin": "E",
+                "flightClass": "E",
+                "operatingCarrier": "VA",
+                "operatingFlightNumber": "VA572",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 199,
+                "currency": "USD",
+                "passengerType": "ADT",
+                "quantity": "1",
+                "tax": 0
+            }
+        ],
+        "productType": "Lite"
+    }
+]
