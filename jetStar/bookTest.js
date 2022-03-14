@@ -96,7 +96,8 @@ let reqData = {
             airports: "LGA-ATL",
             cabins: "E",
             carriers: "F9",
-            flightNumbers: "JQ560,JQ906",
+            // flightNumbers: "JQ560,JQ906",
+            flightNumbers: "JQ508",
             flightTimes: "2022-01-27 10:46:00/2022-01-27 13:30:00",
             operatingCarriers: "F9"
         },
@@ -462,14 +463,17 @@ function shengdanFun(info, reqData, currency) {
         if (flightNumbersFirst && !flightNumbersSecond) {
             if (itemTimeArr[0].firstFlightNum == flightNumbersFirst) {
                 selPrice = itemTimeArr[0].price
-                itemTimeArr[0].parentNode.childNodes[1].childNodes[3].childNodes[3].childNodes[5].click()
+                console.log("itemTimeArr[0]", itemTimeArr);
+                // itemTimeArr[0].parentNode.childNodes[1].childNodes[3].childNodes[3].childNodes[5].click()
+                itemTimeArr[0].parentNode.childNodes[1].childNodes[7].childNodes[3].childNodes[5].click()
                 break ok
             }
         }
         if (flightNumbersFirst && flightNumbersSecond) {
             if (itemTimeArr[0].firstFlightNum == flightNumbersFirst && itemTimeArr[0].secondFlightNum == flightNumbersSecond) {
                 selPrice = itemTimeArr[0].price
-                itemTimeArr[0].parentNode.childNodes[1].childNodes[3].childNodes[3].childNodes[5].click()
+                // itemTimeArr[0].parentNode.childNodes[1].childNodes[3].childNodes[3].childNodes[5].click()
+                itemTimeArr[0].parentNode.childNodes[1].childNodes[7].childNodes[3].childNodes[5].click()
                 break ok
             }
         }
