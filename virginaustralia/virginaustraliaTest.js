@@ -22,83 +22,57 @@ function resFun(adt, chd) {
         return resData
     }
     let arr = [].slice.apply(itemArr[0].childNodes)
-    arr.shift()
     try {
-        // ok:
         for (let i = 0; i < arr.length; i++) {
-            arr[i].innerTextArr = arr[i].innerText.split("\n")
-            // console.log("arr[i].innerTextArr", arr[i].innerTextArr);
-            if (arr[i].innerText.indexOf("1 Stop") > -1 || arr[i].innerText.indexOf("2 Stops") > -1) {
-                // break ok;
+            if (arr[i].innerText.indexOf("stop") > -1) {
             } else {
-                arr[i].childNodes[0].childNodes[0].childNodes[3].childNodes[0].click()
-                //   获取 报价的第一种方法
-                // let chdArr = [].slice.apply(arr[i].childNodes[0].childNodes[2].childNodes[2].childNodes[0].childNodes[1].childNodes)
-                // priceOk:
-                // for (let j = 0; j < chdArr.length; j++) {
-                //     chdArr[j].priceInfoArr = chdArr[j].innerText.split("\n");
-                //     if (chdArr[j].priceInfoArr[chdArr[j].priceInfoArr.length - 1] == "Sale" || chdArr[j].priceInfoArr[chdArr[j].priceInfoArr.length - 1] == "Book Early") {
-                //         arr[i].price = chdArr[j].priceInfoArr[chdArr[j].priceInfoArr.length - 2]
-                //         arr[i].priceType = chdArr[j].priceInfoArr[0]
-                //         console.log(arr[i].price, arr[i].priceType);
-                //         break priceOk;
-                //     } else if (chdArr[j].priceInfoArr[chdArr[j].priceInfoArr.length - 1].indexOf("$") > -1) {
-                //         arr[i].price = chdArr[j].priceInfoArr[chdArr[j].priceInfoArr.length - 1]
-                //         arr[i].priceType = chdArr[j].priceInfoArr[0]
-                //         console.log(arr[i].price, arr[i].priceType);
-                //         break priceOk;
-                //     }
-                // }
-
-                // 获取 报价的第二种方法报价处理  这个稳妥点
-                arr[i].priceInfoArr = arr[i].childNodes[0].childNodes[2].childNodes[2].innerText.split("\n");
+                arr[i].innerTextArr = arr[i].innerText.split("\n")
+                console.log(arr[i].innerTextArr);
+                arr[i].rawDepTime = date + ' ' + arr[i].innerTextArr[1]
+                arr[i].rawArrTime = date + ' ' + arr[i].innerTextArr[3]
+                if (arr[i].innerTextArr[5].indexOf("Boeing") > -1) {
+                    arr[i].flightNumber = arr[i].innerTextArr[5].split("Boeing")[0].trim().replace(" ", "")
+                } else if (arr[i].innerTextArr[5].indexOf("Saab") > -1) {
+                    arr[i].flightNumber = arr[i].innerTextArr[5].split("Saab")[0].trim().replace(" ", "")
+                }
+                arr[i].childNodes[0].click()
+                arr[i].detailInnerTextArr = document.querySelector(".spark-modal__content.content").innerText.split("\n")
+                document.querySelector(".spark-modal__close").click()
                 priceOk:
-                for (let j = 0; j < arr[i].priceInfoArr.length; j++) {
-                    if (arr[i].priceInfoArr[j] == "Select Lite brand offer. Price:") {
-                        if (arr[i].priceInfoArr[j + 1].indexOf("$") > -1) {
-                            arr[i].price = arr[i].priceInfoArr[j + 1]
+                for (let j = 0; j < arr[i].detailInnerTextArr.length; j++) {
+                    if (arr[i].detailInnerTextArr[j].indexOf("Lite") > -1) {
+                        if (arr[i].detailInnerTextArr[j + 2].indexOf("$") > -1) {
+                            console.log("lite");
+                            arr[i].price = arr[i].detailInnerTextArr[j + 2]
                             arr[i].priceType = "Lite"
-                            break priceOk
+                            break priceOk;
                         }
                     }
-                    if (arr[i].priceInfoArr[j] == "Select Choice brand offer. Price:") {
-                        if (arr[i].priceInfoArr[j + 1].indexOf("$") > -1) {
-                            arr[i].price = arr[i].priceInfoArr[j + 1]
+                    if (arr[i].detailInnerTextArr[j].indexOf("Choice") > -1) {
+                        if (arr[i].detailInnerTextArr[j + 2].indexOf("$") > -1) {
+                            console.log("Choice");
+                            arr[i].price = arr[i].detailInnerTextArr[j + 2]
                             arr[i].priceType = "Choice"
-                            break priceOk
-
+                            break priceOk;
                         }
                     }
-                    if (arr[i].priceInfoArr[j] == "Select Flex brand offer. Price:") {
-                        if (arr[i].priceInfoArr[j + 1].indexOf("$") > -1) {
-                            arr[i].price = arr[i].priceInfoArr[j + 1]
+                    if (arr[i].detailInnerTextArr[j].indexOf("Flex") > -1) {
+                        if (arr[i].detailInnerTextArr[j + 2].indexOf("$") > -1) {
+                            console.log("Flex");
+                            arr[i].price = arr[i].detailInnerTextArr[j + 2]
                             arr[i].priceType = "Flex"
-                            break priceOk
+                            break priceOk;
                         }
                     }
-                    if (arr[i].priceInfoArr[j] == "Select Business brand offer. Price:") {
-                        if (arr[i].priceInfoArr[j + 1].indexOf("$") > -1) {
-                            arr[i].price = arr[i].priceInfoArr[j + 1]
+                    if (arr[i].detailInnerTextArr[j].indexOf("Business") > -1) {
+                        if (arr[i].detailInnerTextArr[j + 2].indexOf("$") > -1) {
+                            console.log("Business");
+                            arr[i].price = arr[i].detailInnerTextArr[j + 2]
                             arr[i].priceType = "Business"
-                            break priceOk
+                            break priceOk;
                         }
                     }
                 }
-
-                arr[i].innerTextArr.forEach((item, index) => {
-                    if (item == "to") {
-                        arr[i].depAirport = arr[i].innerTextArr[index - 1]
-                        arr[i].arrAirport = arr[i].innerTextArr[index + 2]
-                        arr[i].rawDepTime = date + " " + arr[i].innerTextArr[index - 2]
-                        arr[i].rawArrTime = date + " " + arr[i].innerTextArr[index + 1]
-                    }
-                    if (item == "Stops") {
-                        arr[i].firstFlightNumber = arr[i].innerTextArr[index + 1].split("·")[1]
-                        arr[i].flightTimeArr = arr[i].innerTextArr[index - 1].split("·")[0]
-                    }
-                })
-                console.log(arr);
-
 
                 //  出发时间处理
                 if ((new Date(arr[i].rawDepTime.slice(0, -2)).getHours() == "12" && arr[i].rawDepTime.indexOf("pm") > -1) || (new Date(arr[i].rawDepTime.slice(0, -2)).getHours() != "12" && arr[i].rawDepTime.indexOf("am") > -1)) {
@@ -126,90 +100,66 @@ function resFun(adt, chd) {
                         arr[i].arrTime = dateFun(arr[i].arrTime)
                     }
                 }
-                //  飞行时间
 
-                if (arr[i].flightTimeArr.indexOf("hr") > -1 && arr[i].flightTimeArr.indexOf("min") > -1) {
-                    arr[i].flightTime = arr[i].flightTimeArr.split("hr")[0].trim() * 1 * 60 + arr[i].flightTimeArr.split("hr")[1].substring(-1, 3).trim() * 1
-                }
-                if (arr[i].flightTimeArr.indexOf("hr") > -1 && arr[i].flightTimeArr.indexOf("min") == -1) {
-                    arr[i].flightTime = arr[i].flightTimeArr.split("hr")[0].trim() * 1 * 60
-                }
-                if (arr[i].flightTimeArr.indexOf("hr") == -1 && arr[i].flightTimeArr.indexOf("min") > -1) {
-                    arr[i].flightTime = arr[i].flightTimeArr.split("hr")[1].substring(-1, 3).trim() * 1
-                }
-                if (arr[i].innerText.indexOf("+1 day") > -1) {
-                    arr[i].arrTime = dateFun(new Date(new Date(arr[i].arrTime).getTime() + 1000 * 60 * 60 * 24))
-                }
 
+                if (arr[i].innerTextArr[4].indexOf("hr") > -1 && arr[i].innerTextArr[4].indexOf("min") > -1) {
+                    arr[i].flightTime = arr[i].innerTextArr[4].split("hr")[0].trim() * 1 * 60 + arr[i].innerTextArr[4].split("hr")[1].substring(1, 3).trim() * 1
+                }
+                if (arr[i].innerTextArr[4].indexOf("hr") > -1 && arr[i].innerTextArr[4].indexOf("min") == -1) {
+                    arr[i].flightTime = arr[i].innerTextArr[4].split("hr")[0].trim() * 1 * 60
+                }
+                if (arr[i].innerTextArr[4].indexOf("hr") == -1 && arr[i].innerTextArr[4].indexOf("min") > -1) {
+                    arr[i].flightTime = arr[i].innerTextArr[4].split("hr")[1].substring(1, 3).trim() * 1
+                }
                 resData.push({
                     fromSegments: [
                         {
-                            depAirport: arr[i].depAirport,
-                            depCity: arr[i].depAirport,
+                            depAirport: arr[i].innerTextArr[0],
+                            depCity: arr[i].innerTextArr[0],
                             depTime: arr[i].depTime,
-                            arrAirport: arr[i].arrAirport,
-                            arrCity: arr[i].arrAirport,
+                            arrAirport: arr[i].innerTextArr[2],
+                            arrCity: arr[i].innerTextArr[2],
                             arrTime: arr[i].arrTime,
-                            flightNumber: arr[i].firstFlightNumber.trim(),
+                            flightNumber: arr[i].flightNumber,
                             flightTime: arr[i].flightTime + "",
                             carrier: "VA",
                             cabin: "E",
                             flightClass: "E",
                             operatingCarrier: "VA",
-                            operatingFlightNumber: arr[i].firstFlightNumber.trim(),
+                            operatingFlightNumber: arr[i].flightNumber,
                             seatsRemain: adt * 1 + chd * 1 + "",
                             stopQuantity: "0",
                         }
                     ],
                     priceInfos: [{
-                        baseFare: arr[i].price,
+                        baseFare: arr[i].price.substr(1) * 1,
                         currency: "AUD",
                         passengerType: "ADT",
-                        quantity: adt,
+                        quantity: adt * 1,
                         tax: 0,
                     }],
                     productType: arr[i].priceType
                 })
+                if (chd > 0) {
+                    arr[i].priceInfos.push({
+                        baseFare: item.priceInfos[0].baseFare,
+                        currency: "AUD",
+                        passengerType: "CHD",
+                        quantity: chd * 1,
+                        tax: 0,
+                    })
+                }
             }
         }
-        return priceFun(resData, chd)
+        // console.log("arr", arr);
+
+        return resData
     } catch (e) {
         console.log(e);
-
         return "ParseException"
     }
-}
-function priceFun(resData, chd) {
-    let airPortCodeArr = airPortCodeFun()
-    resData.forEach((item, index) => {
-        item.fromSegments.forEach(it => {
-            airPortCodeArr.forEach(airIt => {
-                if (it.depAirport == airIt.label) {
-                    it.depCity = it.depAirport = airIt.val
-                }
-                if (it.arrAirport == airIt.label) {
-                    it.arrCity = it.arrAirport = airIt.val
-                }
-            })
-        })
-        if (item.priceInfos[0].baseFare.indexOf(",") > -1) {
-            item.priceInfos[0].baseFare = item.priceInfos[0].baseFare.replace(",", "") * 1
-        }
-        item.priceInfos[0].baseFare = item.priceInfos[0].baseFare.substr(1) * 1
-        if (chd > 0) {
-            item.priceInfos.push({
-                baseFare: item.priceInfos[0].baseFare,
-                currency: "AUD",
-                passengerType: "CHD",
-                quantity: chd,
-                tax: 0,
-            })
-        }
-        if (item.fromSegments[0].flightNumber.indexOf("VA") == -1) {
-            resData.splice(index, 1)
-        }
-    })
-    return resData
+    // console.log("arr", arr);
+
 }
 function dateFun(date) {
     let arrStr = "";
@@ -219,111 +169,3 @@ function dateFun(date) {
 }
 let resArr = resFun(adt, chd)
 console.log(JSON.stringify(resArr));
-
-function airPortCodeFun() {
-    let arr = [{
-        label: "Adelaide",
-        val: "ADL"
-    }, {
-        label: "Alice Springs",
-        val: "ASP"
-    }, {
-        label: "Ballina Byron",
-        val: "BNK"
-    }, {
-        label: "Brisbane",
-        val: "BNE"
-    }, {
-        label: "Broome",
-        val: "BME"
-    }, {
-        label: "Cairns",
-        val: "CNS"
-    }, {
-        label: "Canberra",
-        val: "CBR"
-    }, {
-        label: "Christmas Island",
-        val: "XCH"
-    }, {
-        label: "Cocos Islands",
-        val: "CCK"
-    }, {
-        label: "Coffs Harbour",
-        val: "CFS"
-    }, {
-        label: "Darwin",
-        val: "DRW"
-    }, {
-        label: "Emerald",
-        val: "EMD"
-    }, {
-        label: "Gladstone",
-        val: "GLT"
-    }, {
-        label: "Gold Coast",
-        val: "OOL"
-    }, {
-        label: "Hamilton Island",
-        val: "HTI"
-    }, {
-        label: "Hayman Island",
-        val: "HIS"
-    }, {
-        label: "Hobart",
-        val: "HBA"
-    }, {
-        label: "Kalgoorlie",
-        val: "KGI"
-    },
-    {
-        label: "Karratha",
-        val: "KTA"
-    }, {
-        label: "Kununurra",
-        val: "KNX"
-    }, {
-        label: "Launceston",
-        val: "LST"
-    }, {
-        label: "Mackay",
-        val: "MKY"
-    }, {
-        label: "Melbourne",
-        val: "MEL"
-    }, {
-        label: "Mount Isa",
-        val: "ISA"
-    }, {
-        label: "Newcastle - Port Stephens",
-        val: "NTL"
-    }, {
-        label: "Newman",
-        val: "ZNE"
-    }, {
-        label: "Onslow",
-        val: "ONS"
-    }, {
-        label: "Perth",
-        val: "PER"
-    }, {
-        label: "Port Hedland",
-        val: "PHE"
-    }, {
-        label: "Rockhampton",
-        val: "ROK"
-    }, {
-        label: "Sunshine Coast",
-        val: "MCY"
-    }, {
-        label: "Sydney",
-        val: "SYD"
-    }, {
-        label: "Townsville",
-        val: "TSV"
-    }, {
-        label: "Whitsunday Coast",
-        val: "PPP"
-    }]
-    return arr
-}
