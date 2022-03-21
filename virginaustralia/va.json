@@ -2,26 +2,26 @@
     {
         "fromSegments": [
             {
-                "depAirport": "PER",
-                "depCity": "PER",
-                "depTime": "2022-05-03 06:00:00",
-                "arrAirport": "MEL",
-                "arrCity": "MEL",
-                "arrTime": "2022-05-03 11:35:00",
-                "flightNumber": "VA678",
-                "flightTime": "215",
+                "depAirport": "SYD",
+                "depCity": "SYD",
+                "depTime": "2022-05-19 07:15:00",
+                "arrAirport": "ADL",
+                "arrCity": "ADL",
+                "arrTime": "2022-05-19 08:55:00",
+                "flightNumber": "VA404",
+                "flightTime": "130",
                 "carrier": "VA",
-                "cabin": "E",
+                "cabin": "Lite",
                 "flightClass": "E",
                 "operatingCarrier": "VA",
-                "operatingFlightNumber": "VA678",
+                "operatingFlightNumber": "VA404",
                 "seatsRemain": "1",
                 "stopQuantity": "0"
             }
         ],
         "priceInfos": [
             {
-                "baseFare": 215,
+                "baseFare": 99,
                 "currency": "AUD",
                 "passengerType": "ADT",
                 "quantity": 1,
@@ -33,26 +33,26 @@
     {
         "fromSegments": [
             {
-                "depAirport": "PER",
-                "depCity": "PER",
-                "depTime": "2022-05-03 10:20:00",
-                "arrAirport": "MEL",
-                "arrCity": "MEL",
-                "arrTime": "2022-05-03 15:55:00",
-                "flightNumber": "VA684",
-                "flightTime": "215",
+                "depAirport": "SYD",
+                "depCity": "SYD",
+                "depTime": "2022-05-19 09:15:00",
+                "arrAirport": "ADL",
+                "arrCity": "ADL",
+                "arrTime": "2022-05-19 10:55:00",
+                "flightNumber": "VA412",
+                "flightTime": "130",
                 "carrier": "VA",
-                "cabin": "E",
+                "cabin": "Lite",
                 "flightClass": "E",
                 "operatingCarrier": "VA",
-                "operatingFlightNumber": "VA684",
+                "operatingFlightNumber": "VA412",
                 "seatsRemain": "1",
                 "stopQuantity": "0"
             }
         ],
         "priceInfos": [
             {
-                "baseFare": 215,
+                "baseFare": 109,
                 "currency": "AUD",
                 "passengerType": "ADT",
                 "quantity": 1,
@@ -64,26 +64,26 @@
     {
         "fromSegments": [
             {
-                "depAirport": "PER",
-                "depCity": "PER",
-                "depTime": "2022-05-03 12:20:00",
-                "arrAirport": "MEL",
-                "arrCity": "MEL",
-                "arrTime": "2022-05-03 17:55:00",
-                "flightNumber": "VA686",
-                "flightTime": "215",
+                "depAirport": "SYD",
+                "depCity": "SYD",
+                "depTime": "2022-05-19 12:15:00",
+                "arrAirport": "ADL",
+                "arrCity": "ADL",
+                "arrTime": "2022-05-19 13:55:00",
+                "flightNumber": "VA418",
+                "flightTime": "130",
                 "carrier": "VA",
-                "cabin": "E",
+                "cabin": "Lite",
                 "flightClass": "E",
                 "operatingCarrier": "VA",
-                "operatingFlightNumber": "VA686",
+                "operatingFlightNumber": "VA418",
                 "seatsRemain": "1",
                 "stopQuantity": "0"
             }
         ],
         "priceInfos": [
             {
-                "baseFare": 249,
+                "baseFare": 99,
                 "currency": "AUD",
                 "passengerType": "ADT",
                 "quantity": 1,
@@ -95,26 +95,57 @@
     {
         "fromSegments": [
             {
-                "depAirport": "PER",
-                "depCity": "PER",
-                "depTime": "2022-05-03 18:00:00",
-                "arrAirport": "MEL",
-                "arrCity": "MEL",
-                "arrTime": "2022-05-03 23:35:00",
-                "flightNumber": "VA696",
-                "flightTime": "215",
+                "depAirport": "SYD",
+                "depCity": "SYD",
+                "depTime": "2022-05-19 17:30:00",
+                "arrAirport": "ADL",
+                "arrCity": "ADL",
+                "arrTime": "2022-05-19 19:10:00",
+                "flightNumber": "VA434",
+                "flightTime": "130",
                 "carrier": "VA",
-                "cabin": "E",
+                "cabin": "Lite",
                 "flightClass": "E",
                 "operatingCarrier": "VA",
-                "operatingFlightNumber": "VA696",
+                "operatingFlightNumber": "VA434",
                 "seatsRemain": "1",
                 "stopQuantity": "0"
             }
         ],
         "priceInfos": [
             {
-                "baseFare": 215,
+                "baseFare": 109,
+                "currency": "AUD",
+                "passengerType": "ADT",
+                "quantity": 1,
+                "tax": 0
+            }
+        ],
+        "productType": "Lite"
+    },
+    {
+        "fromSegments": [
+            {
+                "depAirport": "SYD",
+                "depCity": "SYD",
+                "depTime": "2022-05-19 18:55:00",
+                "arrAirport": "ADL",
+                "arrCity": "ADL",
+                "arrTime": "2022-05-19 20:35:00",
+                "flightNumber": "VA438",
+                "flightTime": "130",
+                "carrier": "VA",
+                "cabin": "Lite",
+                "flightClass": "E",
+                "operatingCarrier": "VA",
+                "operatingFlightNumber": "VA438",
+                "seatsRemain": "1",
+                "stopQuantity": "0"
+            }
+        ],
+        "priceInfos": [
+            {
+                "baseFare": 145,
                 "currency": "AUD",
                 "passengerType": "ADT",
                 "quantity": 1,

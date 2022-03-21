@@ -151,6 +151,13 @@ function resFun(adt, chd) {
                 }
             }
         }
+        resData.forEach(item => {
+            item.fromSegments.forEach(it_se => {
+                if (item.productType == "Lite") {
+                    it_se.cabin = "Lite"
+                }
+            })
+        })
         // console.log("arr", arr);
 
         return resData
